@@ -1,0 +1,150 @@
+
+body{
+   background-image: url('./assets/images/background.png');
+   background-size: contain;
+}
+nav{
+    transition: all ease 0.5s;
+    background-color: rgba(0, 0, 0, 0.685);
+}
+.container-fluid>a{
+    color: rgb(14, 191, 223);
+}
+.nav-link:hover{
+    color: rgb(51, 187, 250);
+}
+.active{
+    color:rgb(51, 187, 250);
+    border-bottom: 1px solid rgb(51, 187, 250);
+}
+
+.profile-img{
+    border-radius:40% 60% 40% 60% / 60% 35% 65% 40%   ;
+    object-fit: cover;
+    border: 2px solid transparent;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.conic-gradient,.conic-gradient:before{
+    border-radius: 40% 60% 40% 60% / 60% 35% 65% 40%  ;
+    background: conic-gradient(from var(--angle), cyan,rgba(28, 248, 248, 0.308),rgba(67, 240, 240, 0.322),rgba(104, 245, 245, 0.24),cyan);
+    z-index: -1;
+    animation: glowing-border 2s linear infinite;
+}
+.conic-gradient:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(15px);
+    opacity: 0.8;
+   
+}
+
+@keyframes glowing-border{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+.img-box-shadow{
+    box-shadow: 0 0 15px cyan;
+}
+.hover-zoom:hover{
+    overflow: hidden;
+    translate: 0  -1.2rem;
+    transition: all 0.3s ease-out;
+    box-shadow: 0px 2px 4px cyan;
+}
+.divider{
+    height: 48px;
+    
+}
+
+@keyframes glow{
+    from{
+        filter: drop-shadow(0px 0px 2px);
+    }
+    to{
+        filter: drop-shadow(0px 0px 8px);
+    }
+}
+.glow-effect{
+    animation: glow 1s alternate infinite;
+}
+.skill-btn{
+    padding: 8px;
+    flex-shrink: 0;
+    border-radius: 20px;
+}
+.skill-html{
+    border: 1px solid #e45726;
+    color: #e45726;
+}
+.skill-css{
+    border: 1px solid #254bdf;
+    color: #254bdf;
+}
+.skill-boot{
+    border:1px solid #8612fb;
+    color: #8612fb;
+}
+.skill-js{
+    border:1px solid #efd81d;
+    color: #efd81d;
+}
+.skill-react{
+    border:1px solid #5bc0de;
+    color: #5bc0de;
+}
+.skill-node{
+    border:1px solid #5cad47;
+    color: #5cad47;
+}
+.skill-tailwind{
+    border:1px solid #366ee7;
+    color: #6188db;
+}
+.skill-express{
+    border:1px solid #5cad47;
+    color: #a1ce95;
+}
+
+/*custom get in touch page*/
+.form,.contact-info{
+    border: 1px solid cyan;
+    box-shadow: 0 0 10px cyan;
+    padding: 1rem;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.685);
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.63);
+}
+.form-group input[type='text'],input[type='email']{
+    background-color: transparent;
+    border: 1px solid rgba(0, 255, 255, 0.336);
+}
+.form-group textarea{
+    background-color: transparent;
+    border: 1px solid rgba(0, 255, 255, 0.336);
+}
+.form-group input:focus{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    box-shadow: 0 0 0.25rem cyan;
+}
+.form-group textarea:focus{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    box-shadow: 0 0 0.25rem cyan;
+}
+.watermark{
+ filter: drop-shadow(0 0 5px);
+}
